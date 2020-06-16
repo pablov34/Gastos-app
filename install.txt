@@ -1,0 +1,47 @@
+npm install --save firebase
+npm install --save react-router
+npm install --save react-router-dom
+npm install axios
+npm install --save firebaseui // para tener una pagina de login de firebase
+
+
+**npm cache clean --force
+npm i -D node-sass
+npm i moment
+npm i formik
+npm i yup
+
+https://www.youtube.com/watch?v=i4cZmjN6kl0&list=PL33bS175Qm6dvflmiQTHX10O--OKyzWrn&index=5
+
+explicacion del proyecto
+component/layout 
+Se utiliza para tener un layout general para todas las paginas, ver que luego se importa en 
+Dashboard
+
+style.module.scss  sass style que solo aplica al Layout
+
+/context 
+dos contextos, uno para Auth y otro para controlar los Expenses
+utilizan watches de los datos desde firebase    
+
+/pages
+
+/service    
+api.js
+metodos CRUD generales puestos en un solo lugar
+
+firebase.js
+conexion a firebase 
+
+watcher.js
+2 metodos, ambos reciben un callback (ambos son usados en los context)
+estos metodos lo que hacen es actualizar cuando hay cambio en las fuentes
+el context recibe esa actualización. Es lo bueno de esta forma  
+
+watchExpenses devuelve un array de objetos
+watchUserChanges devuelve un objeto con los datos del usuario logueado
+
+
+
+ <h1>Gastos</h1>
+            <h1> {context.expenses.length}</h1>
