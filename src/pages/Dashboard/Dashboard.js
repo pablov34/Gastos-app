@@ -23,6 +23,7 @@ function Dashboard()
 
     const selectedexpense = context.expenses.find(e => e.id === expenseId)
 
+    //filtering
     let filterExpenses = (expenseFilter) => {
         console.log("expensefilter: " + expenseFilter);
         let filteredExpenses = context.expenses
